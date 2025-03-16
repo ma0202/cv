@@ -5,14 +5,13 @@ export const DATA = {
   name: "Muskan Ahuja",
   initials: "MA",
   url: "https://muskanahuja.com",
-  // location: "San Francisco, CA",
-  // locationLink: "https://www.google.com/maps/place/sanfrancisco",
-  // description:
-  //   "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
-  // summary:
-  //   "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/me.png",
-  // skills: [
+  location: "Boston, Massachusetts, United States",
+  locationLink: "https://www.google.com/maps/place/Boston,+MA",
+  
+  description: "Finance professional passionate about investment analysis, impact investing, and data-driven decision-making.",
+  summary: "I am a dedicated finance professional pursuing a Master of Science in Finance (STEM) at Brandeis International Business School. Currently, I am an Investment Analyst Intern at Traub Capital Management, focusing on stock selection and portfolio performance through quantitative models. My expertise includes financial modeling, impact investing, and market research. I have worked on various finance projects using Bloomberg, Morningstar, and Capital IQ. With achievements such as winning the GMIC Annual Stock Pitch Competition and the Heller Startup Challenge, I am committed to making a meaningful impact in the financial sector. I am actively exploring opportunities in Investment Banking, Private Equity, and Impact Investing. Let’s connect to discuss finance, investments, and innovative market strategies.",
+avatarUrl: "/me.png",
+  skills: [
   //   "React",
   //   "Next.js",
   //   "Typescript",
@@ -24,7 +23,7 @@ export const DATA = {
   //   "Kubernetes",
   //   "Java",
   //   "C++",
-  // ],
+  ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
@@ -178,7 +177,7 @@ export const DATA = {
     //   end: "2016",
     // },
   ],
-  // projects: [
+  projects: [
   //   {
   //     title: "Chat Collect",
   //     href: "https://chatcollect.com",
@@ -686,5 +685,5 @@ export const DATA = {
   //       },
   //     ],
   //   },
-  // ],
+  ],
 } as const;
