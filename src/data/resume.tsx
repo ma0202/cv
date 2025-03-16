@@ -41,7 +41,7 @@ avatarUrl: "/me.png",
       // },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/muskanahuja0",
+        url: "https://www.linkedin.com/in/muskanahuja02?trk=public_profile_samename-profile",
         icon: Icons.linkedin,
 
         navbar: true,
