@@ -1,73 +1,46 @@
-import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const fontSans = FontSans({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const fontSerif = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
+  metadataBase: new URL("https://muskanahuja.com"),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: "Muskan Ahuja — Financial Analyst",
+    template: "%s · Muskan Ahuja",
   },
-  description: DATA.description,
+  description:
+    "Financial analyst with experience across M&A, capital allocation, and investment research. Master of Science in Finance, Brandeis International Business School.",
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: `${DATA.name}`,
+    title: "Muskan Ahuja — Financial Analyst",
+    description:
+      "FP&A, investment research, and M&A valuation across multi-billion dollar businesses. MS Finance, Brandeis.",
+    url: "https://muskanahuja.com",
+    siteName: "Muskan Ahuja",
     locale: "en_US",
     type: "website",
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  twitter: {
-    title: `${DATA.name}`,
-    card: "summary_large_image",
-  },
-  verification: {
-    google: "",
-    yandex: "",
-  },
+  robots: { index: true, follow: true },
+  twitter: { title: "Muskan Ahuja — Financial Analyst", card: "summary_large_image" },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="light">
-          <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
-          </TooltipProvider>
-        </ThemeProvider>
-      </body>
+    <html lang="en" className={`${fontSans.variable} ${fontSerif.variable}`}>
+      <body className="font-sans antialiased bg-ivory text-ink">{children}</body>
     </html>
   );
 }
